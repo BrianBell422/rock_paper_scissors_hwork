@@ -20,6 +20,11 @@ from app.models.players import Player
 #     else:
 #         return "None"
 
+
+@app.route("/")
+def welcome():
+    return render_template("welcome.html", title="Welcome")
+
 @app.route("/play")
 def index():
     return render_template("index.html", title="Play the Game")
