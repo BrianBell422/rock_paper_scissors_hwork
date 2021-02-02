@@ -38,7 +38,11 @@
 
     </form>
     <section>
-        {{ result }}
+        {% if result  %}
+        The Winner is {{result.name.capitalize()}} with {{result.choice.capitalize()}}! 
+        {%else%}
+        Its a Tie
+        {% endif %}
     </section>
 </div>
 

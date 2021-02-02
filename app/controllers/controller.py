@@ -39,7 +39,5 @@ def rps():
     player_2 = Player(player_2_name, player_2_choice)
     game = Game()
     winner = game.play(player_1, player_2)
-    if winner:
-        return render_template("index.html", title="Play the Game", result=f"The Winner is {winner.name} with {winner.choice} ")
-    else:
-        return render_template("index.html", title="Play the Game", result="Draw")
+
+    return render_template("index.html", title="Play the Game", result=winner)
